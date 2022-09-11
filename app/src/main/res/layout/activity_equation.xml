@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait"
+    tools:context=".EquationActivity">
+
+    <Button
+        android:id="@+id/colorChangeBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#E91E63"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
+        android:layout_marginBottom="112dp"
+        android:background="@color/colorPrimary"
+        android:text="@android:string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".5" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_marginEnd="205dp"
+        android:layout_marginRight="205dp"
+        android:background="@color/colorPrimary"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".5" />
+
+    <TextView
+        android:id="@+id/bTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="b = "
+        android:textSize="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/bTextEdit"
+        app:layout_constraintTop_toBottomOf="@+id/aTextView" />
+
+    <TextView
+        android:id="@+id/dTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d = "
+        android:textSize="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/dTextEdit"
+        app:layout_constraintTop_toBottomOf="@+id/cTextView" />
+
+    <TextView
+        android:id="@+id/fTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="f = "
+        android:textSize="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/fTextEdit"
+        app:layout_constraintTop_toBottomOf="@+id/eTextView" />
+
+    <EditText
+        android:id="@+id/bTextEdit"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/cTextView"
+        app:layout_constraintEnd_toEndOf="@+id/aTextEdit" />
+
+    <EditText
+        android:id="@+id/dTextEdit"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/eTextView"
+        app:layout_constraintEnd_toEndOf="@+id/cTextEdit" />
+
+    <EditText
+        android:id="@+id/fTextEdit"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toBottomOf="@+id/fTextView"
+        app:layout_constraintEnd_toEndOf="@+id/eTextEdit" />
+
+    <TextView
+        android:id="@+id/baseEquationTextView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:autoSizeMaxTextSize="90sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="y = ax + b"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/degreeSeekBar" />
+
+    <TextView
+        android:id="@+id/aTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="40dp"
+        android:text="a = "
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/baseEquationTextView" />
+
+    <TextView
+        android:id="@+id/cTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="c = "
+        android:textSize="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/cTextEdit"
+        app:layout_constraintTop_toBottomOf="@+id/bTextView" />
+
+    <TextView
+        android:id="@+id/eTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="e = "
+        android:textSize="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/eTextEdit"
+        app:layout_constraintTop_toBottomOf="@+id/dTextView" />
+
+    <EditText
+        android:id="@+id/aTextEdit"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:autoSizeTextType="uniform"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toBottomOf="@+id/aTextView"
+        app:layout_constraintStart_toEndOf="@+id/aTextView" />
+
+    <EditText
+        android:id="@+id/cTextEdit"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toBottomOf="@+id/cTextView"
+        app:layout_constraintEnd_toEndOf="@+id/bTextEdit" />
+
+    <EditText
+        android:id="@+id/eTextEdit"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toBottomOf="@+id/eTextView"
+        app:layout_constraintEnd_toEndOf="@+id/dTextEdit" />
+
+    <TextView
+        android:id="@+id/degreesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginLeft="148dp"
+        android:layout_marginBottom="12dp"
+        android:text="Degrees:"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/degreeSeekBar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/degreeSeekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="354dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="68dp"
+        android:max="5"
+        android:progress="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/degreeTextEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/degreesTextView"
+        app:layout_constraintTop_toTopOf="@+id/degreesTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

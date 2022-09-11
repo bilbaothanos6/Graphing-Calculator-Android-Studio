@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait"
+    android:background="#ffffff"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/setBoundsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/addEquationBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:text="Set Bounds" />
+
+    <Button
+        android:id="@+id/addEquationBtn"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/generateGraphsBtn"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:text="Add Equation" />
+
+    <Button
+        android:id="@+id/generateGraphsBtn"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:text="Generate Graphs" />
+
+    <TextView
+        android:id="@+id/xDomainTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/yDomainTextView"
+        android:textSize="30dp"
+        android:paddingLeft="16dp"
+        android:text="x: [-10, 10]" />
+
+    <TextView
+        android:id="@+id/yDomainTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/setBoundsBtn"
+        android:textSize="30dp"
+        android:paddingLeft="16dp"
+        android:paddingBottom="5dp"
+        android:text="y: [-10, 10]" />
+
+    <ListView
+        android:id="@+id/equationListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="138dp">
+
+    </ListView>
+</RelativeLayout>
